@@ -15,7 +15,7 @@
 ╱╱╱╱╱╱╱╰╯╱╰━━╯╱╱╱╰━━╯
 
 
-© 2026 Federico Lora 
+© 2026 Fedes10
 */
 /* ==================== VARIABLES CSS ==================== */
 :root {
@@ -734,7 +734,7 @@ h3 {
 .section-divider {
     display: flex;
     align-items: center;
-    margin: 4px 0;
+    margin: 50px 0;
     gap: 20px;
 }
 
@@ -780,7 +780,7 @@ h3 {
 }
 
 body.dark-mode .divider-button {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08);
     border-color: rgba(148, 163, 184, 0.45);
     color: #cfe1ff;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
@@ -1078,22 +1078,6 @@ body.dark-mode .footer-link-item:hover {
         font-size: 0.86rem;
         padding: 4px 8px;
         border-radius: 12px;
-        animation: floatHintSoft 4.2s ease-in-out infinite;
-    }
-
-    .divider-button:hover {
-        border-color: rgba(0, 0, 0, 0.12);
-        background: rgba(0, 0, 0, 0.02);
-        transform: none;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    body.dark-mode .divider-button:hover {
-        border-color: rgba(148, 163, 184, 0.45);
-        background: rgba(255, 255, 255, 0.05);
-        color: #cfe1ff;
-        transform: none;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
     }
 
     h3 {
@@ -1144,7 +1128,7 @@ body.dark-mode .footer-link-item:hover {
     }
 
     .section-divider {
-        margin: 16px 0;
+        margin: 28px 0;
     }
 
     .minimal-footer {
@@ -1155,7 +1139,8 @@ body.dark-mode .footer-link-item:hover {
 /* Responsive para móviles */
 @media (max-width: 480px) {
     .glass-card {
-        margin: 10px;
+        margin-bottom: 22px;
+        margin: 12px;
         padding: 15px;
     }
     
@@ -1202,14 +1187,5 @@ body.dark-mode .footer-link-item:hover {
 
     .footer-main span {
         font-size: 0.66rem;
-    }
-}
-
-@keyframes floatHintSoft {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-1px);
     }
 }
