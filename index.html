@@ -7,7 +7,7 @@
 ╰╯╱╱╰━━┻━━┻━━┻━━┻━━┻━━━╯
 ╭━━━╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮╱╭╮
 ┃╭━╮┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃╭╯╰╮
-┃┃╱╰╋━━┳━━┳╮╱╭┳━┳┳━━┫╰┻╮╭╯
+┃┃╱╰┳━━┳━━┳╮╱╭┳━┳┳━━┫╰┻╮╭╯
 ┃┃╱╭┫╭╮┃╭╮┃┃╱┃┃╭╋┫╭╮┃╭╮┃┃
 ┃╰━╯┃╰╯┃╰╯┃╰━╯┃┃┃┃╰╯┃┃┃┃╰╮
 ╰━━━┻━━┫╭━┻━╮╭┻╯╰┻━╮┣╯╰┻━╯
@@ -15,7 +15,7 @@
 ╱╱╱╱╱╱╱╰╯╱╰━━╯╱╱╱╰━━╯
 
 
-© 2026 Federico Lora 
+© 2026 Fedes10
 -->
 <!DOCTYPE html>
 <html lang="es">
@@ -448,20 +448,21 @@
         <!-- ==================== SEPARADOR ==================== -->
         <div class="section-divider">
             <div class="divider-line"></div>
-            <div class="divider-text">
-                <i class="fas fa-book-open"></i> Para saber más
-            </div>
+            <button class="divider-button" id="toggle-more-sections" type="button">
+                <i class="fas fa-book-open"></i> Para saber mas de Hakuna
+            </button>
             <div class="divider-line"></div>
         </div>
 
-        <!-- ==================== ¿QUÉ ES HAKUNA? ==================== -->
-        <section id="que-es-hakuna">
-            <div class="glass-card collapsible-section">
-                <h2 class="section-header">
-                    <i class="fas fa-heart"></i> ¿Qué es Hakuna? 
-                    <i class="fas fa-chevron-down section-toggle-icon" id="icon-que-es-hakuna-content"></i>
-                </h2>
-                <div class="section-content info-section" id="que-es-hakuna-content">
+        <div class="more-sections" id="more-sections">
+            <!-- ==================== ¿QUÉ ES HAKUNA? ==================== -->
+            <section id="que-es-hakuna">
+                <div class="glass-card collapsible-section">
+                    <h2 class="section-header">
+                        <i class="fas fa-heart"></i> ¿Qué es Hakuna? 
+                        <i class="fas fa-chevron-down section-toggle-icon" id="icon-que-es-hakuna-content"></i>
+                    </h2>
+                    <div class="section-content info-section" id="que-es-hakuna-content">
             
             <p>Hakuna es una <strong>familia eucarística</strong> nacida en la Jornada Mundial de la Juventud de Río de Janeiro 2013, cuando el Papa Francisco nos convocó con estas palabras: <em>"¡Id! ¡No tengáis miedo! ¡Servid!"</em> Y también nos desafió: <em>"¡Hagan lío!"</em> – a no conformarnos, a atrevernos a cambiar el mundo con el Evangelio.</p>
             
@@ -483,18 +484,18 @@
             <p>No somos una asociación más, ni un movimiento juvenil al uso. Hakuna es un <strong>estilo de vida</strong>, una forma concreta de vivir el Evangelio hoy. Es llevar <em>"cara de resucitados"</em> en medio de un mundo que a menudo vive como si Dios no existiera.</p>
             
             <p>Es atreverse a ser santos en lo ordinario: en la universidad, en el trabajo, en las fiestas, en la familia. Es vivir con alegría radical, sabiendo que Cristo ha vencido al mundo y que merece la pena entregarlo todo por Él.</p>
-            </div>
-            </div>
-        </section>
+                    </div>
+                </div>
+            </section>
 
-        <!-- ==================== ¿QUÉ ES SER PRINGADO? ==================== -->
-        <section id="que-es-pringado">
-            <div class="glass-card collapsible-section">
-                <h2 class="section-header">
-                    <i class="fas fa-cross"></i> ¿Qué es ser Pringado de Hakuna? 
-                    <i class="fas fa-chevron-down section-toggle-icon" id="icon-que-es-pringado-content"></i>
-                </h2>
-                <div class="section-content info-section" id="que-es-pringado-content">
+            <!-- ==================== ¿QUÉ ES SER PRINGADO? ==================== -->
+            <section id="que-es-pringado">
+                <div class="glass-card collapsible-section">
+                    <h2 class="section-header">
+                        <i class="fas fa-cross"></i> ¿Qué es ser Pringado de Hakuna? 
+                        <i class="fas fa-chevron-down section-toggle-icon" id="icon-que-es-pringado-content"></i>
+                    </h2>
+                    <div class="section-content info-section" id="que-es-pringado-content">
             
             <p>Ser <strong>pringado</strong> es el compromiso laical concreto dentro de la familia Hakuna. La expresión, aparentemente coloquial, encierra una decisión radical: <em>“Me pringo, me mancho las manos, me lo juego todo por Cristo y su Iglesia”</em>. Es atreverse a ensuciarse en la trinchera del amor, sin medias tintas ni comodidades.</p>
             
@@ -517,9 +518,56 @@
             <p>El pringado busca la <strong>santidad en lo ordinario</strong>. No necesitamos hacer cosas extraordinarias; necesitamos hacer lo ordinario con amor extraordinario. Por eso las reglas del pringado son sencillas: una sonrisa, una mirada, un rato de adoración, una lectura espiritual...</p>
             
             <p>Finalmente, ser pringado es <strong>vivir bajo el manto de María</strong>, Madre de Hakuna. Ella nos enseña a decir "sí" sin condiciones, a estar de pie junto a la cruz cuando todo se oscurece. Con María, solo sabemos decirle "sí" a Jesús.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="minimal-footer">
+            <div class="footer-main">
+                <span>© 2026 Web hecha por un pringado mas - Fedes10</span>
+                <button class="footer-toggle" id="footer-toggle" type="button">Acerca del autor</button>
             </div>
+            <div class="footer-panel" id="footer-panel">
+                <div class="footer-panel-section">
+                    <h4>Por qué nace</h4>
+                    <p>
+                        Esta web nace para ayudar a rezar y tener más presente al Señor, con una rutina diaria sencilla
+                        y accesible al estilo de Hakuna. Es una alternativa digital a los libros de oraciones del día,
+                        más actual y fácil de seguir.
+                    </p>
+                </div>
+                <div class="footer-panel-section">
+                    <h4>Qué ofrece</h4>
+                    <ol>
+                        <li><strong>Empezar el día:</strong> oración de la mañana y el santo del día.</li>
+                        <li><strong>Oración del Pringado:</strong> oración clave para cualquier momento, acompañada de una frase aleatoria de las pulseras de Hakuna.</li>
+                        <li><strong>Decálogo del Pringado:</strong> con una regla diaria para intentar vivirla hoy.</li>
+                        <li><strong>Acabar el día:</strong> oración de la noche y un gesto a la Virgen.</li>
+                        <li><strong>Info extra:</strong> qué es Hakuna y qué es ser pringado.</li>
+                    </ol>
+                </div>
+                <div class="footer-panel-section footer-panel-note">
+                    <h4>Aviso</h4>
+                    <p>
+                        Proyecto creado con buen propósito. No quiere sustituir a Hakuna ni a su web oficial, solo
+                        aportar una ayuda extra para rezar un poquito más cada día. Si se considera oportuno
+                        modificarla o cerrarla, lo aceptaré con total respeto. Web hecha con toda el alma
+                        <span class="footer-hashtag">#ctea</span>
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:fedestalgat@gmail.com" class="footer-link-item" title="Email">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://github.com/Fedes10/HakunaPringadoWeb" target="_blank" rel="noopener" class="footer-link-item" title="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
             </div>
-        </section>
+        </footer>
 
     </div>
 

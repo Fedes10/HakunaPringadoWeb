@@ -7,7 +7,7 @@
 ╰╯╱╱╰━━┻━━┻━━┻━━┻━━┻━━━╯
 ╭━━━╮╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭╮╱╭╮
 ┃╭━╮┃╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃┃╭╯╰╮
-┃┃╱╰╋━━┳━━┳╮╱╭┳━┳┳━━┫╰┻╮╭╯
+┃┃╱╰┳━━┳━━┳╮╱╭┳━┳┳━━┫╰┻╮╭╯
 ┃┃╱╭┫╭╮┃╭╮┃┃╱┃┃╭╋┫╭╮┃╭╮┃┃
 ┃╰━╯┃╰╯┃╰╯┃╰━╯┃┃┃┃╰╯┃┃┃┃╰╮
 ╰━━━┻━━┫╭━┻━╮╭┻╯╰┻━╮┣╯╰┻━╯
@@ -15,7 +15,7 @@
 ╱╱╱╱╱╱╱╰╯╱╰━━╯╱╱╱╰━━╯
 
 
-© 2026 Federico Lora 
+© 2026 Fedes10
 */
 // ==================== FUNCIONES DE TOGGLE PARA REGLAS DEL DECÁLOGO ====================
 function toggleDetail(index) {
@@ -537,6 +537,30 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
         });
     });
+
+    // ==================== TOGGLE PARA SABER MAS ====================
+    const moreToggleButton = document.getElementById('toggle-more-sections');
+    const moreSections = document.getElementById('more-sections');
+
+    if (moreToggleButton && moreSections) {
+        moreToggleButton.addEventListener('click', function(e) {
+            moreSections.classList.toggle('open');
+            moreToggleButton.classList.toggle('open');
+            e.stopPropagation();
+        });
+    }
+
+    // ==================== TOGGLE FOOTER PANEL ====================
+    const footerToggleButton = document.getElementById('footer-toggle');
+    const footerPanel = document.getElementById('footer-panel');
+
+    if (footerToggleButton && footerPanel) {
+        footerToggleButton.addEventListener('click', function(e) {
+            footerPanel.classList.toggle('open');
+            footerToggleButton.classList.toggle('open');
+            e.stopPropagation();
+        });
+    }
 });
 
 // ==================== CERRAR DESPLEGABLES AL HACER CLICK FUERA ====================
@@ -580,5 +604,37 @@ document.addEventListener('click', function (event) {
                 icon.classList.remove('open');
             }
         });
+    }
+
+    const moreSections = document.getElementById('more-sections');
+    const moreToggleButton = document.getElementById('toggle-more-sections');
+    if (moreSections && moreSections.classList.contains('open')) {
+        if (!event.target.closest('#more-sections') && !event.target.closest('#toggle-more-sections')) {
+            moreSections.classList.remove('open');
+            if (moreToggleButton) {
+                moreToggleButton.classList.remove('open');
+            }
+
+            const extraSectionIds = ['que-es-hakuna-content', 'que-es-pringado-content'];
+            extraSectionIds.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                const icon = document.getElementById('icon-' + sectionId);
+                if (section && section.classList.contains('open')) {
+                    section.classList.remove('open');
+                    icon.classList.remove('open');
+                }
+            });
+        }
+    }
+
+    const footerPanel = document.getElementById('footer-panel');
+    const footerToggleButton = document.getElementById('footer-toggle');
+    if (footerPanel && footerPanel.classList.contains('open')) {
+        if (!event.target.closest('#footer-panel') && !event.target.closest('#footer-toggle')) {
+            footerPanel.classList.remove('open');
+            if (footerToggleButton) {
+                footerToggleButton.classList.remove('open');
+            }
+        }
     }
 });

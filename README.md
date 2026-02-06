@@ -15,7 +15,7 @@
 ╱╱╱╱╱╱╱╰╯╱╰━━╯╱╱╱╰━━╯
 
 
-© 2026 Federico Lora 
+© 2026 Fedes10
 -->
 # HakunaPringadoWeb
 Web Pringado Hakuna
